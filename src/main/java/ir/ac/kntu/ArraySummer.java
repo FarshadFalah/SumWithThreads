@@ -5,7 +5,7 @@ package ir.ac.kntu;
  */
 public class ArraySummer implements Runnable {
     private Integer[] array;
-    private Integer sum;
+    private Integer sum=0;
     private Integer start, end;
 
     public ArraySummer(Integer[] array, Integer start, Integer end) {
@@ -21,6 +21,9 @@ public class ArraySummer implements Runnable {
 
     public void run() {
         // TODO: calculate sum of the given array from start to end
+        for (int i = start; i < end; i++) {
+            sum+=array[i];
+        }
     }
 
     /***
